@@ -27,13 +27,13 @@ body {
 }
 
 button {
-  background: none; /* Removes any background color */
-  color: inherit; /* Inherits text color from parent element */
-  border: none; /* Removes any border */
-  padding: 0; /* Removes default padding */
-  font: inherit; /* Inherits font styles from parent element */
-  cursor: pointer; /* Maintains the pointer cursor on hover */
-  outline: inherit; /* Inherits outline style (important for accessibility) */
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 /* header section */
@@ -260,15 +260,28 @@ button:hover {
 }
 
 /* pBandai */
+.premium {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
 .bandai {
+    float: left;
+    width: calc(50% - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #2d2d2d;
     border-radius: 10px;
     padding: 15px;
-    margin: 10px;
+    margin: 5px;
     border: 1px solid rgb(204, 180, 113);
+    box-sizing: border-box;
+}
+
+.bandai {
+   float: right;
 }
 
 .bandai a {
@@ -334,7 +347,9 @@ footer {
    margin: 10px 10px 0 10px;
    padding: 15px 30px;
    text-align: center;
+   clear: both;
 }
+
 /* Mobile Accessibility Improvements */
 @media screen and (max-width: 768px) {
    html {

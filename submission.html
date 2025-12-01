@@ -1,0 +1,56 @@
+!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Submission Received</title>
+        <!--
+        Gundam Website form submission page
+        Filename: submission.html
+
+        Author: Michael Ly
+        Date: 11/30/2025
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="icon" href="image/Thumbnail.png" type="image/png">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Submission Received</h1>
+            </header>
+            <nav class="sitenavigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="official.html">Official</a></li>
+                    <li><a href="other.html">Other Sites</a></li>
+                    <li><a href="pbandai.html">P-bandai</a></li>
+                    <li><a href="form.html">Contact</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h2>Thank you for your submission!</h2>
+                <p>Here's what you submitted:</p>
+                <!-- This is where your form gets displayed 9I don't want to actually receive it) -->
+                <div class="submission">
+                    <p>Name: <span id="display-name"></span></p>
+                    <p>Email: <span id="display-email"></span></p>
+                    <p>Type: <span id="display-type"></span></p>
+                    <p>Information: <span id="display-info"></span></p>
+                </div>
+            </article>
+        </div>
+        <footer>This page was last modified on: <span id="lastModifiedDate"></span></footer>
+        <script> document.getElementById("lastModifiedDate").textContent = document.lastModified; </script>
+        <script>
+            // It allows you to extract strings from the previous URL (forms) and allows you to manipulate it or just display
+            const urlP = new URLSearchParams(window.location.search);
+            
+            // Display the submitted data
+            document.getElementById('display-name').textContent = urlP.get('name') || 'Not provided';
+            document.getElementById('display-email').textContent = urlP.get('email') || 'Not provided';
+            document.getElementById('display-type').textContent = urlP.get('type') || 'Not provided';
+            document.getElementById('display-info').textContent = urlP.get('information') || 'Not provided';
+        </script>  
+    </body>
+</html>

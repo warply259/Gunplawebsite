@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Gundam Website</title>
+        <!--
+        Gundam Website gunpla websites
+        Filename: other.html
+
+        Author: Michael Ly
+        Date: 11/30/2025
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="assets/modernizr.custom.40753.js"></script>
+        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="icon" href="image/Thumbnail.png" type="image/png">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Model kit websites</h1>
+            </header>
+            <nav class="sitenavigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="official.html">Official</a></li>
+                    <li><a href="other.html">Other Sites</a></li>
+                    <li><a href="pbandai.html">P-bandai</a></li>
+                    <li><a href="form.html">Contact</a></li>
+                </ul>
+            </nav>
+            <article> 
+                <!-- Contains the filters such as -->
+                <div class="filter">
+                    <div class="filtertype">
+                        <label for="nameFilter">Filter by Store Name:</label>
+                        <input type="text" id="nameFilter" placeholder="Enter store name..." data-clear-btn="true">
+                    </div>
+                    
+                    <div class="filtertype">
+                        <label for="shippingFilter">Filter by Shipping Type:</label>
+                        <select id="shippingFilter" data-native-menu="false">
+                            <option value="all">All Shipping Types</option>
+                            <option value="flat-rate">Flat Rate</option>
+                            <option value="free-shipping">Free Shipping</option>
+                            <option value="threshold">Free Shipping Over Threshold</option>
+                            <option value="variable">Variable/Calculated</option>
+                        </select>
+                    </div>
+                    
+                    <!-- ui-grid-a is for jquery mobile where it represents a two column layout so the buttons are side-by-side -->
+                    <div class="ui-grid-a">
+                        <!-- first column -->
+                        <div class="ui-block-a">
+                                            <!-- ui-btn = button & ui-btn-b is alt colors -->
+                            <button id="applyFilters" onclick="audio.play()" class="ui-btn ui-btn-b">Apply Filters</button>
+                        </div>
+                        <!-- second column -->
+                        <div class="ui-block-b">
+                            <button id="clearFilters" onclick="audio.play()" class="ui-btn">Clear Filters</button>
+                        </div>
+                        <!-- A script that plays an audio when you clock on apply or clear filter -->
+                        <script type="text/javascript">const audio = new Audio(); audio.src = "audio/clicknoise.mp3";</script>
+                    </div>
+                </div>
+                <div class="stores">
+                    <dl id="storeList">
+                        <!-- website list woohoo look at these things guys -->
+                        <!-- Along with classes to tell if they are flat-rate or otherwise when shipping over to you -->
+                        <div class="storeitem">
+                            <dt><a href="https://aztoyhobby.com/">A-Z Toy Hobby</a></dt>
+                            <dd class="flat-rate">Flat rate: $6.99</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://www.bigbadtoystore.com/">Big Bad Toy Store</a></dt>
+                            <dd class="flat-rate">Flat rate: $4.00</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://bitsandbobstoyshop.com/">Bits & Bobs Toy Shop</a></dt>
+                            <dd class="threshold">Free shipping on orders over $50</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://houseofhobbies.com/">Burbank's House of Hobbies</a></dt>
+                            <dd class="variable">Calculated at checkout</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://g2bgundamstore.com/">G2B Gundam Store</a></dt>
+                            <dd class="flat-rate">Flat rate: $8.50</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://galactictoys.com/collections/gundam">Galactic Toys</a></dt>
+                            <dd class="free-shipping">Free shipping on orders over $75</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://www.glacieranime.com/">Glacier Hobbies</a></dt>
+                            <dd class="flat-rate">Flat rate: $5.99</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://gundamplacestore.com">Gundam Place Store</a></dt>
+                            <dd class="free-shipping">Free shipping on orders over $99</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://www.gundamplanet.com/">Gundam Planet</a></dt>
+                            <dd class="threshold">Free shipping on orders over $100</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://www.gundampros.shop/">GundamPros</a></dt>
+                            <dd class="flat-rate">Flat rate: $7.99</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://gunnzo.com/">Gunnzo</a></dt>
+                            <dd class="threshold">Free shipping on orders over $75</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://www.gunplastyle.com/">GunplaStyle</a></dt>
+                            <dd class="flat-rate">Flat rate: $6.95</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://www.hobbyaction.net/">Hobby Action</a></dt>
+                            <dd class="flat-rate">Free shipping on orders over $100</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://impulsehobbies.com/">ImpulseHobbies</a></dt>
+                            <dd class="flat-rate">Flat rate: $6.50</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://lascalemodel.com/">LA Scale Model</a></dt>
+                            <dd class="variable">Based on weight and location</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://leapingpandahobbies.com/">Leaping Panda Hobbies</a></dt>
+                            <dd class="threshold">Free shipping on orders over $60</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://www.lunartoystore.com/">Lunar Toy Store</a></dt>
+                            <dd class="flat-rate">Flat rate: $5.95</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://midwesthobbyandcraft.com/">Midwest Hobby and Craft</a></dt>
+                            <dd class="variable">Calculated at checkout</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://mountainstatemodels.com/">Mountain State Models</a></dt>
+                            <dd class="flat-rate">Flat rate: $7.25</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://mrshobby.com/">M R S Hobby Shop</a></dt>
+                            <dd class="threshold">Free shipping on orders over $65</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://mrshobby.com/">Newtype</a></dt>
+                            <dd class="threshold">Free shipping on orders over $95</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://r4lus.com/">Robots 4 Less</a></dt>
+                            <dd class="flat-rate">Flat rate: $6.99</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://toyarena.com/">Toy Arena</a></dt>
+                            <dd class="free-shipping">Free shipping on all orders</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://www.usagundamstore.com/">USA Gundam Store</a></dt>
+                            <dd class="free-shipping">Free shipping on orders over $100</dd>
+                        </div>
+                        
+                        <div class="storeitem">
+                            <dt><a href="https://www.vulcanhobby.com/">Vulcan Hobby</a></dt>
+                            <dd class="variable">Based on order total</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://mechawarehouse.com/">Mecha Warehouse</a></dt>
+                            <dd class="free-shipping">Free shipping on orders over $89</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://robotkai.com/">RobotKai</a></dt>
+                            <dd class="flat-rate">Flat rate: $7.50</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://www.thegundamgalaxy.com/">The Gundam Galaxy</a></dt>
+                            <dd class="threshold">Free shipping on orders over $80</dd>
+                        </div>
+
+                        <div class="storeitem">
+                            <dt><a href="https://thegunplahermitsshop.com/">The Gunpla Hermit's Shop</a></dt>
+                            <dd class="variable">Calculated at checkout</dd>
+                        </div>
+                        
+                    </dl>
+                </div>
+            </article>
+        </div>
+        <footer>This page was last modified on: <span id="lastModifiedDate"></span></footer>
+        <script> document.getElementById("lastModifiedDate").textContent = document.lastModified; </script>
+        <!-- The scripts needed including jquery and jquery mobile -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="assets/search.js"></script>
+        
+    </body>
+</html>

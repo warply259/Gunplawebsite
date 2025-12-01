@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact or Suggestion</title>
+        <!--
+        Gundam Website form page
+        Filename: form.html
+
+        Author: Michael Ly
+        Date: 11/30/2025
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="assets/modernizr.custom.40753.js"></script>
+        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="icon" href="image/Thumbnail.png" type="image/png">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Contact or Suggestion</h1>
+            </header>
+            <nav class="sitenavigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="official.html">Official</a></li>
+                    <li><a href="other.html">Other Sites</a></li>
+                    <li><a href="pbandai.html">P-bandai</a></li>
+                    <li><a href="form.html">Contact</a></li>
+                </ul>
+            </nav>
+            <article id="form">
+
+                <!-- The form section where you input your name and email but email is not required because I don't care whether to email you back -->
+                <form id="contactForm" action="submission.html" method="GET">
+                    <fieldset class="contactinfo">
+                        <legend>Contact info</legend>
+                        <label for="nameinput"> Name
+                            <input type="text" id="nameinput" name="name" placeholder="Actual or User name" required>
+                        </label>
+                        <label for="emailinput">Email
+                            <input type="email" id="emailinput" name="email" placeholder="address@example.com">
+                        </label>
+                    </fieldset>
+                    <!-- This section tells me whether you want to suggest an addition to the website or to tell me something -->
+                    <fieldset class="contacttype">
+                        <legend>Type</legend>
+                        <label for="contact"> 
+                            <input type="radio" id="contact" name="type" value="Contact" required>Contact
+                        </label>
+                        
+                        <label for="suggestion"> 
+                            <input type="radio" id="suggestion" name="type" value="Suggestion" required>Suggestion
+                        </label>
+                    </fieldset>
+
+                    <!-- Where you type out what you want to tell me -->
+                    <fieldset class="info">
+                        <legend>Information</legend>
+                        <label for="notes">Info
+                            <textarea id="notes" name="information" rows="4" cols="60" required></textarea>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="submitbutton">
+                        <input type="submit" id="submit" value="Submit Request">
+                    </fieldset>
+                </form>
+            </article>
+        </div>
+        <footer>This page was last modified on: <span id="lastModifiedDate"></span></footer>
+        <script> document.getElementById("lastModifiedDate").textContent = document.lastModified; </script>
+    </body>
+</html>

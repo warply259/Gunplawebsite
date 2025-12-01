@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Gundam Website</title>
+        <!--
+        Gundam Website home page
+        Filename: index.html
+
+        Author: Michael Ly
+        Date: 11/30/2025
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="assets/modernizr.custom.62074.js"></script>
+        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="icon" href="image/Thumbnail.png" type="image/png">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Gundam Website</h1>
+            </header>
+            <nav class="sitenavigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="official.html">Official</a></li>
+                    <li><a href="other.html">Other Sites</a></li>
+                    <li><a href="pbandai.html">P-bandai</a></li>
+                    <li><a href="form.html">Contact</a></li>
+                </ul>
+            </nav>
+            <article>
+                <!-- To show model kits as well as a picture from the show (I could've find a good picture of the dendrobium) -->
+                <figure>
+                    <img src="image/HGUCdendrobium.png" alt="RX-78GP03 Gundam Dendrobium">
+                    <img src="image/MGEXunicorn.png" alt="RX-0 Unicorn Gundam">
+                    <img src="image/PGgundam.png" alt="RX-78-2 Gundam">
+                    <img src="image/RGsazabi.jpg" alt="MSN-04 Sazabi">
+                    <img src="image/PGnugundam.png" alt="RX-93 ν Gundam">
+                    <img src="image/RGwinggundamew.jpg" alt="XXXG-00W0 Wing Gundam Zero">
+                    <img src="image/MGooquantafb.jpg" alt="GNT-0000 00 Qan[T]">
+                    <img src="image/HGpenelopegundam.png" alt="RX-104FF Penelope">
+                </figure>
+                <!-- A simple to show the grades, scale to the mech, difficulty to build, how common they are and price point -->
+                <table>
+                    <tr>
+                        <th class="gradeheader">Grade</th>
+                        <th>MG</th>
+                        <th>HG</th>
+                        <th>RG</th>
+                        <th>PG</th>
+                    </tr>
+                    <tr>
+                        <th class="category">Scale</th>
+                        <td>1/100</td>
+                        <td colspan="2">1/144</td>
+                        <td>1/60</td>
+                    </tr>
+                    <tr>
+                        <th class="category">Difficulty</th>
+                        <td>Medium</td>
+                        <td>Easy</td>
+                        <td colspan="2">Hard</td>
+                    </tr>
+                    <tr>
+                        <th class="category">Commonality</th>
+                        <td>2nd</td>
+                        <td>1st</td>
+                        <td>3rd</td>
+                        <td>4th</td>
+                    </tr>
+                    <tr>
+                        <th class="category">Price</th>
+                        <td>$30-60</td>
+                        <td>$10-30</td>
+                        <td>$30-40</td>
+                        <td>$150-300</td>
+                    </tr>
+                </table>
+                <!-- This is additional information that might be useful if you want to read up on other grades like re/100 or discontinued grade lines -->
+                <p>Additional Information</p>
+                <div class=vid>
+                    <video width="800" height="535" controls>
+                        <source src="video/The Ultimate Gunpla Beginner's Guide - YouSeeGundam (1080p, h264).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="pdf">
+                    <a><embed src="doc/what.pdf" type="application/pdf" width="100%" height="600px" /></a>
+                    <a><embed src="doc/scale.pdf" type="application/pdf" width="100%" height="600px" /></a>
+                </div>
+            </article>
+        </div>
+        <!-- Tells you when the page was last modified -->
+        <footer>This page was last modified on: <span id="lastModifiedDate"></span></footer>
+        <script> document.getElementById("lastModifiedDate").textContent = document.lastModified; </script>
+    </body>
+</html>

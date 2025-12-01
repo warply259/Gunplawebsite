@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Gundam Website</title>
+        <!--
+        Gundam Website premium bandai page
+        Filename:pbandai.html
+
+        Author: Michael Ly
+        Date: 11/30/2025
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="assets/modernizr.custom.40753.js"></script>
+        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="icon" href="image/Thumbnail.png" type="image/png">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Premium Bandai</h1>
+            </header>
+            <nav class="sitenavigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="official.html">Official</a></li>
+                    <li><a href="other.html">Other Sites</a></li>
+                    <li><a href="pbandai.html">P-bandai</a></li>
+                    <li><a href="form.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- A simple simple page where you can pre-order or buy premium bandai products at MSRP and a twitter timeline so that you can see any new drops from bandai -->
+            <article class="premium">
+                <div class="bandai">
+                    <a class=website href="https://p-bandai.com/us">
+                        <img src="image/PB.jpg" height="30" width="30" alt="pBandai Logo">
+                        Premium Bandai
+                    </a>
+                </div>
+                <div class="bandai">
+                    <!-- Twitter timeline, this can be gotten but searching it up on youtube -->
+                    <a class="twitter-timeline" data-width="500" data-height="800" data-theme="dark" href="https://twitter.com/_PREMIUMBANDAI_?ref_src=twsrc%5Etfw">Tweets by _PREMIUMBANDAI_</a> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </article>
+        </div>
+        <footer>This page was last modified on: <span id="lastModifiedDate"></span></footer>
+        <script> document.getElementById("lastModifiedDate").textContent = document.lastModified; </script>
+    </body>
+</html>

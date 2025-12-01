@@ -189,6 +189,34 @@ ul {
    background-color: rgb(38, 38, 71);
 }
 
+.box {
+  color: white;
+  border: 1px solid rgb(31, 37, 109);
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: rgb(38, 38, 71);
+  /* Add overflow to contain floated element */
+  overflow: auto;
+}
+
+.item {
+   float: left;
+   width: 50%;
+}
+.item dt {
+   font-weight: bold;
+}
+
+.itemimage {
+  float: right;
+  max-height: 100%; /* Limit height to container */
+  max-width: 40%; /* Limit width to prevent taking too much space */
+  object-fit: cover; /* or contain, based on your preference */
+  border-radius: 5px; /* Optional: match the container's style */
+  margin-left: 12px; /* Add spacing from text */
+}
+
 /* search and filters */
 .filter {
    margin: 15px;
